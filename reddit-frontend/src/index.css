@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-reddit-background text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-reddit-orange text-white px-4 py-2 rounded-full font-bold hover:bg-orange-600 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-reddit-blue text-white px-4 py-2 rounded-full font-bold hover:bg-blue-600 transition-colors;
+  }
+  
+  .btn-outline {
+    @apply border border-reddit-blue text-reddit-blue px-4 py-2 rounded-full font-bold hover:bg-reddit-blue hover:text-white transition-colors;
+  }
+  
+  .post-card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 hover:border-gray-300 transition-colors;
+  }
+  
+  .vote-button {
+    @apply p-1 rounded hover:bg-gray-100 transition-colors;
+  }
+  
+  .vote-button.upvoted {
+    @apply text-reddit-orange bg-orange-50;
+  }
+  
+  .vote-button.downvoted {
+    @apply text-blue-600 bg-blue-50;
+  }
+}

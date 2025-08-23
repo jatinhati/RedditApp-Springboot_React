@@ -1,0 +1,41 @@
+# Test API Endpoints
+
+### Health Check
+GET http://localhost:7777/api/v1/health
+
+### Test Communities Endpoint
+GET http://localhost:7777/api/v1/communities?page=0&size=10
+
+### Test Posts Endpoint  
+GET http://localhost:7777/api/v1/posts?page=0&size=10
+
+### Test Login (you'll need to create a user first)
+POST http://localhost:7777/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "password123"
+}
+
+### Test Register
+POST http://localhost:7777/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "username": "newuser",
+  "email": "newuser@example.com", 
+  "password": "password123"
+}
+
+### Create Community (after login, use the token)
+POST http://localhost:7777/api/v1/communities
+Content-Type: application/json
+Authorization: Bearer YOUR_TOKEN_HERE
+
+{
+  "name": "testcommunity",
+  "displayName": "r/testcommunity",
+  "description": "A test community",
+  "creatorId": 1
+}
