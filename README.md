@@ -1,6 +1,7 @@
 # Reddit Clone
 
 A full-stack Reddit clone built with Spring Boot and React, featuring communities, posts, comments, and user interactions.
+https://github.com/user-attachments/assets/6bd4b588-2a52-44d1-9fe7-2ef336b217cb
 
 ## Features
 
